@@ -38,7 +38,8 @@ def main(args):
 		event, value = window.read()
 
 		if value  != None :
-			usr = {value['usuario']:[event, time.time()]}
+			#usr = {value['usuario']:[event, time.time()]}
+			usr = {'usr' :value['usuario'], 'juego':event, 'fecha': time.ctime(time.time())}
 
 		if event == 'ahorcado':
 			window.close()
